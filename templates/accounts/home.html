@@ -1,0 +1,22 @@
+<!-- accounts/templates/accounts/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/style.css' %}">
+</head>
+<body>
+    <h1>Home Page</h1>
+    {% if user.is_authenticated %}
+        <p>Welcome back, {{ user.username }}!</p>
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Log Out</button>
+        </form>
+    {% else %}
+        <p>Hello, Guest!</p>
+        <a href="{% url 'login' %}">Log In</a> | <a href="{% url 'signup' %}">Sign Up</a>
+    {% endif %}
+</body>
+</html>
