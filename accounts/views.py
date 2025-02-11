@@ -39,3 +39,11 @@ def home_view(request):
 @login_required
 def secret_view(request):
     return render(request, 'accounts/secret.html')
+def services_view(request):
+    return render(request, 'accounts/services.html')
+def about_view(request):
+    return render(request, 'accounts/about.html')
+def profile_view(request):
+    return render(request, 'accounts/profile.html')
+def contact_view(request):
+    return render(request, 'accounts/contact.html')

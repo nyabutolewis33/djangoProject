@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/style.css' %}">
+</head>
+<body>
+<nav>
+      <ul>
+        <li><a href="{% url 'home' %}">home</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li class="profile"><a href="{% url 'profile' %}">Profile</a></li>
+        <li class="auth"><a href="{% url 'login' %}">Login</a></li>
+        <li class="auth"><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+    </nav>
+  <header>
+    <h1>Our Services</h1>
+  </header>
+  <section class="services">
+    <div class="service">
+      <h2>Web Development</h2>
+      <p>We create stunning websites that help your business grow.</p>
+    </div>
+    <div class="service">
+      <h2>Graphic Design</h2>
+      <p>Our designs are eye-catching and tailored to your needs.</p>
+    </div>
+    <div class="service">
+      <h2>SEO Optimization</h2>
+      <p>Improve your search engine ranking and visibility.</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Nyabswebservices. All rights reserved.</p>
+  </footer>
+</body>
+</html>

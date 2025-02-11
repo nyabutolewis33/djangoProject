@@ -1,3 +1,14 @@
+<nav>
+      <ul>
+        <li><a href="{% url 'home' %}">home</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li class="profile"><a href="{% url 'profile' %}">Profile</a></li>
+        <li class="auth"><a href="{% url 'login' %}">Login</a></li>
+        <li class="auth"><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+    </nav>
 <!-- accounts/templates/accounts/signup.html -->
 <h2>Sign Up</h2>
 {% load static %}
